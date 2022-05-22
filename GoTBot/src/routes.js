@@ -11,13 +11,16 @@ export function routes({ input, session }) {
             action: Houses,
         }
       ]
+    } else if(input.text == 'See words') {
+        return [
+            {
+                path: 'words',
+                text: 'See words',
+                payload: (t) => t.startsWith('https://www.anapioficeandfire.com/api/houses'),
+                action: Words
+            }
+        ]
     } else return [
-        {
-            path: 'words',
-            text: 'See words',
-            payload: (t) => t.startsWith('https://www.anapioficeandfire.com/api/houses'),
-            action: Words
-        },
         {
             path: 'lebowski',
             type: 'text',
