@@ -26,16 +26,3 @@ export function routes({ input, session }) {
         }
     ]
 }
-
-/*export const routes = [
-  {
-    path: 'houses',
-    type: 'text',
-    action: Houses,
-    childRoutes: [{
-        path: 'lebowski',
-        type: 'text',
-        action: Lebowski
-    }]
-}
-]*/
