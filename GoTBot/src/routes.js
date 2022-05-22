@@ -1,9 +1,15 @@
-import Initial from './actions/initial'
+import Houses from './actions/houses'
+import Lebowski from './actions/lebowski'
 
 export const routes = [
   {
-    path: 'initial',
-    text: /hi/,
-    action: Initial
-  }
+    path: 'houses',
+    type: 'text',
+    action: Houses,
+    childRoutes: [{
+        path: 'lebowski',
+        type: 'text',
+        action: Lebowski
+    }]
+}
 ]
