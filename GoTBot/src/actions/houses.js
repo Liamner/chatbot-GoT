@@ -1,6 +1,6 @@
 import React from 'react'
 import fetch from 'isomorphic-fetch'
-import { RequestContext, Text, Carousel, Element, Pic, Title, Button } from '@botonic/react'
+import { RequestContext, Text, Carousel, Element, Title, Button } from '@botonic/react'
 
 export default class extends React.Component {
     static contextType = RequestContext
@@ -41,18 +41,15 @@ export default class extends React.Component {
     return (
         <>
             <Text>Here are the Game of Thrones houses!</Text>
-            {
             <Carousel>
                 {this.props.houses.map((e) => (
                     <Element key={e.name}>
                         <Title>{e.name}</Title>
-                        <Button onClick={() => (<><Text>{e.words}</Text></>)}>See words</Button>
+                        <Button payload={e.url}>See words</Button>
                     </Element>
                 ))}
             </Carousel> 
-            }
-            
-      </>
+        </>
     )
   }
 }
