@@ -1,7 +1,6 @@
 import Houses from './actions/houses'
 import Lebowski from './actions/lebowski'
-
-
+import Words from './actions/words'
 
 export function routes({ input, session }) {
     if (session.is_first_interaction) {
@@ -17,7 +16,7 @@ export function routes({ input, session }) {
             path: 'words',
             text: 'See words',
             payload: (t) => t.startsWith('https://www.anapioficeandfire.com/api/houses'),
-            action: Houses
+            action: Words
         },
         {
             path: 'lebowski',
